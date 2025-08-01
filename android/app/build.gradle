@@ -39,7 +39,7 @@ repositories {
 
 dependencies {
     // Capacitor native runtime (required for BridgeActivity)
-    implementation 'io.ionic:capacitor-android:5.0.6'
+    implementation 'com.getcapacitor:capacitor-android:4.8.0'
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
