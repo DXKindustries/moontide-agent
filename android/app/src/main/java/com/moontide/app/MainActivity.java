@@ -1,4 +1,4 @@
-package com.example.moontide;
+package com.moontide.app;
 
 import com.getcapacitor.BridgeActivity;
 

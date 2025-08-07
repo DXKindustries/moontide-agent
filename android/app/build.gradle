@@ -1,11 +1,11 @@
 apply plugin: 'com.android.application'
 
 android {
-    namespace "com.example.moontide"
+    namespace "com.moontide.app"
     compileSdk rootProject.ext.compileSdkVersion
 
     defaultConfig {
-        applicationId "com.example.moontide"
+        applicationId "com.moontide.app"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
@@ -25,6 +25,15 @@ android {
                           'proguard-rules.pro'
         }
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = '17'
+    }
 }
 
 repositories {
@@ -39,7 +48,7 @@ repositories {
 
 dependencies {
     // Capacitor native runtime (required for BridgeActivity)
-    implementation 'com.getcapacitor:capacitor-android:4.8.0'
+    implementation 'com.getcapacitor:capacitor-android:7.4.0'
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
